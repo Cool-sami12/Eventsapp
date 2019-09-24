@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 
-const mongoDB = "mongodb+srv://zzzz:zzzzzzzz@test-ylbtt.mongodb.net/test?retryWrites=true&w=majority";
+const mongoDB = process.env.MONGODB_URI;
 
 mongoose.connect(mongoDB,{ useNewUrlParser: true });
 mongoose.Promise = global.Promise;
