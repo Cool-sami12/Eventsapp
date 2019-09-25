@@ -7,10 +7,10 @@ const userController = require('../controllers/user.controller');
 
 
 
-router.get('/test', eventTestcontroller.test);
+router.post('/test', eventTestcontroller.test);
 router.post('/create', eventTestcontroller.eventCreate);
 router.post('/register', userController.register);
-
+router.post('/', userController.getusers)
 
 
 module.exports = router;

@@ -5,18 +5,17 @@ let eventSchema = new Schema({
     name: {
         type:String, 
         required:true,
-        max:255
+        max:255,
     },
     location: {
         type:String,
         required: true,
-        max: 255
+        max: 255,
 
     },
     date: {
-        type: Date,
-        default:Date.now,
-        required: false
+        type:Date,       
+        required: true,
     },
     
 })
