@@ -1,5 +1,5 @@
 const User = require('../models/user.model');
-
+const Events = require('../models/events.model');
 
 exports.register =  function (req, res) {
   try{
@@ -8,7 +8,7 @@ exports.register =  function (req, res) {
         {
             firstname: req.body.firstname,
             lastname: req.body.lastname,
-            eventname: req.body.eventname
+            event_id: req.body.event_id,
         }
 
     )
@@ -19,6 +19,22 @@ exports.register =  function (req, res) {
   catch(err){
 res.json(err)
   }
+}
+
+
+exports.getuser = async function (req, res) {
+    try {
+        
+        const userevent = await User.find({event_id: req.body.event_id});
+        response = {
+            statuscode: 200,
+            data: [userevent],
+            message: 'Success'
+        };
+        res.json(response);
+    } catch (err) {
+        res.json({ message: err });
+    };
 }
 
 
@@ -35,3 +51,4 @@ exports.getusers = async function (req, res) {
         res.json({ message: err });
     };
 }
+

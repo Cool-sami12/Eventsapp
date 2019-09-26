@@ -13,11 +13,12 @@ let userSchema = new Schema({
         required: true,
         max: 255,
     },
-    eventname: {
+    event_id: {
         type: String,
         required: true,
-        max: 255
+        max: 255,
     }
+
 })
 
 

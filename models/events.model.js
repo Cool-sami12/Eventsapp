@@ -7,6 +7,11 @@ let eventSchema = new Schema({
         required:true,
         max:255,
     },
+    description: {
+        type: String,
+        required: true,
+        max: 255,
+    },
     location: {
         type:String,
         required: true,

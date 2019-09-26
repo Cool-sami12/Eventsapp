@@ -9,7 +9,9 @@ const userController = require('../controllers/user.controller');
 
 router.post('/test', eventTestcontroller.test);
 router.post('/create', eventTestcontroller.eventCreate);
+router.post('/all', eventTestcontroller.getevent);
 router.post('/register', userController.register);
+router.post('/getuser',userController.getuser);
 router.post('/', userController.getusers)
 
 
