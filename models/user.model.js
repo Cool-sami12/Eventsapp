@@ -13,11 +13,27 @@ let userSchema = new Schema({
         required: true,
         max: 255,
     },
+    
+    email:{
+        type: String, 
+        unique: true, 
+        trim:true, 
+        lowercase: true, 
+        required: true, 
+        max: 100,
+       
+    },
     event_id: {
         type: String,
         required: true,
         max: 255,
-    }
+    },
+    
+    phonenumber: {
+        type: String,
+        required: true,
+        max: 255,
+    },
 
 })
 

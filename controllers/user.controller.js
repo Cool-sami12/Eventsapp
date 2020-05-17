@@ -8,7 +8,10 @@ exports.register =  function (req, res) {
         {
             firstname: req.body.firstname,
             lastname: req.body.lastname,
+            email: req.body.email,
             event_id: req.body.event_id,
+            phonenumber:req.body.phonenumber,
+            
         }
 
     )
